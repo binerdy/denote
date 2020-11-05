@@ -23,5 +23,12 @@ Deno.test({
         { name: "Alan", verb: "are" },
       ),
     );
+    assertEquals(
+      "<h1>Hello world!</h1>\n<h1>I like denote.</h1>",
+      denote(
+        "<h1 map:parts={part}>{part}</h1>",
+        { parts: ["Hello world!", "I like denote."] },
+      ),
+    );
   },
 });
