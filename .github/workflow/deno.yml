@@ -1,0 +1,19 @@
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          deno: ["latest"]
+      name: Deno ${{ matrix.deno }}
+      steps:
+        - uses: actions/checkout@v2
+        - name: Setup Deno and format files.
+          uses: denolib/setup-deno@v2
+          with:
+            deno-version: ${{ matrix.deno }}
+        - run: |
+            deno --version
+            deno fmt
+            git add .
+            git commit -m "deno setup workflow"
+            git push

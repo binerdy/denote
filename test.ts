@@ -1,5 +1,5 @@
 import { assertEquals } from "https://deno.land/std@0.76.0/testing/asserts.ts";
-import { denote } from "./denote.ts";
+import { denote } from "./@0.1.0/denote.ts";
 
 Deno.test({
   name: "compile templates with denote",
