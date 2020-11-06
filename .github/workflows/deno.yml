@@ -5,7 +5,7 @@ jobs:
       runs-on: ubuntu-latest
       strategy:
         matrix:
-          deno: ["latest"]
+          deno: ["nightly"]
       name: Deno ${{ matrix.deno }}
       steps:
         - uses: actions/checkout@v2
