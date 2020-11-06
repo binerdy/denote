@@ -1,3 +1,5 @@
+name: Deno fmt and update version
+on: push
 jobs:
     build:
       runs-on: ubuntu-latest
